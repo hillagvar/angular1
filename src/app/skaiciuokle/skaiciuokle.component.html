@@ -1,0 +1,27 @@
+<div class="card mt-5">
+    <div class="card-body">
+        <!-- X reiksme: {{x}} <br> -->
+        <label class="form-label">Įveskite skaičių x:</label>
+        <input class="form-control mb-3" type="number" name="x" [(ngModel)]="x">
+        <label class="form-label">Įveskite skaičių y:</label>
+        <input class="form-control mb-3" type="number" name="y" [(ngModel)]="y">
+        <button class="btn btn-primary" (click)="skaiciuok()" [disabled]="x==null || y == null">Sudeti</button>
+        <div class="alert alert-info mt-3" *ngIf="suma != null">Suma: {{suma}}</div>
+    </div>
+</div>
+
+<!-- 
+    
+[value]="x" 
+[class]="z" -- atributui priskiriame reiksme is ts failo
+
+(click)="metodas()" -- kai bus veiksmas click, tuomet iskviesti metoda is ts failo 
+
+[(ngModel)]="z" -- two-way-binding paima reiksme is ts failo, o koreguojant 'htmle' istato reiksme i ts faila
+
+{{tekstas}} -- teksto isvedimas
+
+*ngIf="5==5" -- strukturine direktyva
+
+
+-->
